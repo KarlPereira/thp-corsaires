@@ -1,0 +1,20 @@
+<h1>Corsaires</h1>
+
+<ul id="lol">
+
+  <% @corsairs.each do |corsaire| %>
+
+    <li>
+
+      <%= link_to corsaire.first_name, corsair_path(corsaire) %>
+      <%= corsaire.age %>
+
+    </li>
+
+  <% end %>
+
+</ul>
+
+
+
+<%= link_to "créer un corsaire", new_corsair_path %>
