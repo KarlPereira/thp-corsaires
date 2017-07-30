@@ -1,5 +1,12 @@
 <h1><%= @corsairs.first_name %></h1>
 <p> <%= @corsairs.age %> </p>
+<% if @corsairs.slack_handle != nil %>
+	<p>Voici le pseudo Slack de <%=@corsairs.first_name%> : <%=@corsairs.slack_handle%></p>
+<% else %>
+	<p><%=@corsairs.first_name%> n'a pas encore renseigné son pseudo Slack !</p>
+<% end %>
+<p> <%= @corsairs.github_handle %> </p>
+<p> <%= @corsairs.bio %> </p>
 
 <p>   <a href="<%= edit_corsair_path %>" class= "btn btn-primary">Editer le corsaire</a>
 <p>
