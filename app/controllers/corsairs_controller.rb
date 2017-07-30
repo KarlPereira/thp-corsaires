@@ -17,13 +17,9 @@ end
 
 def update
   @corsairs = Corsair.find(params[:id])
-  if
   @corsairs.update(post_params)
-  flash[:success] = "Welcome to the Sample App!"
   redirect_to corsair_path
-else
-  render 'new'
-end
+
 end
 
   def destroy
